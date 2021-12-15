@@ -1,8 +1,14 @@
 import { createStore } from "vuex";
+import user, { UserState } from "@/store/modules/user";
 
-export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+interface AllState {
+  user: UserState;
+}
+
+const store = createStore<AllState>({
+  modules: {
+    user,
+  },
 });
+
+export default store;

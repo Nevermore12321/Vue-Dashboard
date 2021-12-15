@@ -17,7 +17,7 @@ function resolve(dir) {
 // vue.config.js
 const vueConfig = {
   chainWebpack: (config) => {
-    config.resolve.alias.set("@$", resolve("src"));
+    config.resolve.alias.set("@", resolve("src"));
 
     const svgRule = config.module.rule("svg");
     svgRule.uses.clear();
